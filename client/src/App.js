@@ -10,6 +10,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import './App.css';
+import Login from './components/login'
 
 function App() {
   const [data, setData] = useState([]);
@@ -17,7 +18,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('/api/data'); // Proxy handles localhost:3001
+        const response = await axios.get('/api/data'); // Proxy handles localhost:3001 (setup in config)
         const formattedData = response.data.map((item) => ({
           ...item,
           timestamp: new Date(item.timestamp).toLocaleTimeString(),

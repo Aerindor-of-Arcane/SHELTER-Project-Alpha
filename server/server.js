@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { DeviceData } = require('./models');
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 app.use(bodyParser.json());
@@ -17,6 +18,8 @@ app.post('/api/data', async (req, res) => {
         res.status(500).json({ error: 'Error saving data' });
     }
 });
+
+app.use('/api/auth', authRoutes)
 
 // Endpoint to fetch data
 app.get('/api/data', async (req, res) => {
