@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+
+.chart-container {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+}
+
+
+h1 {
+  color: #4caf50;
+  margin-bottom: 20px;
+}
